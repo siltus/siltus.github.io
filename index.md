@@ -23,11 +23,15 @@ sudo iftop -i lo -P -n -f 'dst port 8888 || src port 8888'
 
 ### Open port 12345 (TCP) in iptables
 
-```sudo iptables -A INPUT -p tcp -m state –state NEW -m tcp –dport 12345 -j ACCEPT ```
+```
+sudo iptables -A INPUT -p tcp -m state –state NEW -m tcp –dport 12345 -j ACCEPT 
+```
 
-to verify, runt 
+to verify, run:
 
-```sudo iptables --list```
+```
+sudo iptables --list
+```
 
 ### rsync
 
