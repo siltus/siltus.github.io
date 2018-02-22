@@ -52,3 +52,12 @@ sudo iptables --list
 * Run `rm -rf .git/modules/path_to_submodule`
 * Commit the changes with `git commit -m "Removed submodu`
 * Delete the now untracked submodule files `rm -rf path_to_submodule`
+
+## SSL and certificates
+
+### Display certificate data in the command line
+
+```
+echo | openssl s_client -showcerts -servername gnupg.org -connect google.com:443 2>/dev/null | openssl x509 -inform pem -noout -text
+```
+
