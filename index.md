@@ -21,6 +21,11 @@ ssh-keygen -R <the_offending_host>
 sudo iftop -i lo -P -n -f 'dst port 8888 || src port 8888' 
 ```
 
+### Listen on port 12345 (for telnet testing)
+```
+nc -l 12345
+```
+
 ### Who listens on which port
 ```
 sudo netstat -peanut
