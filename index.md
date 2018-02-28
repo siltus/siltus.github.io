@@ -43,6 +43,11 @@ to verify, run:
 sudo iptables --list
 ```
 
+### show full path in ps (not truncated)
+```
+ps aux | less -+S
+```
+
 ### rsync
 
 // TODO
