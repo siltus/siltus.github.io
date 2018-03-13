@@ -2,6 +2,32 @@
 
 ## SSH
 
+### Tunnel from internet to localhost (like ngrok)
+
+For example, if you want that server.com:1234 will reach localhost port 5678:
+
+```
+ssh -RN 5678:localhost:1234 user@server.com
+```
+
+you can also add `-f` flag so no real session will be holding the stdout
+
+#### Forwarding SSH 
+
+Need to edit `/etc/ssh/sshd_config` and make these settings to be more secure
+
+```
+PasswordAuthentication no
+```
+
+#### Keep alive
+
+Install `autossh` and run the command:
+
+```
+autossh -M 0 -o "ServerAliveInterval 30" -R 5678:localhost:1234 user@server.com
+```
+
 ### Mount SSH as folder
 
 ```
