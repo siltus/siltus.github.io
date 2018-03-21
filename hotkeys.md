@@ -1,3 +1,5 @@
+# WORK IN PROGRESS !!!
+
 # Hotkeys
 
 ## IDEs
@@ -15,8 +17,11 @@ Find a file by name |
 
 | | Xcode | Android Studio | Sublime | Visual Studio |
 --- | --- | --- | --- | --- | --- |
-Compile |  |  | |  |
-Debug |  |  |  |  |
+Build | &#8984; + `B` |  | | `CTRL` + `SHIFT` + `B` |
+Clean | &#8984; + `SHIFT` + `K` |  | | |
+Debug |  |  |  | `F5` |
 Step into | 
+Step out |
+Step over |
 
 
