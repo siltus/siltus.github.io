@@ -40,6 +40,15 @@ sshfs name@server:/path/to/folder /path/to/mount/point
 ssh-keygen -R <the_offending_host>
 ```
 
+## Networking (POSIX)
+
+### Forward local port 12345 to local port 54321
+(Useful when port 54321 is bound only to localhost and can't be accessed from internet)
+
+```
+socat TCP-LISTEN:12345,fork TCP:localhost:54321
+```
+
 ## Linux
 
 ### Count how many traffic goes through localhost:8888
