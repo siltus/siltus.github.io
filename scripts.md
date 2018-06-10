@@ -111,3 +111,10 @@ ps aux | less -+S
 echo | openssl s_client -showcerts -servername gnupg.org -connect google.com:443 2>/dev/null | openssl x509 -inform pem -noout -text
 ```
 
+### Convert P12 (PKCS) file to seperate PEM key and cert
+
+```
+openssl pkcs12 -in client.p12 -out client.crt.pem -clcerts -nokeys
+openssl pkcs12 -in client.p12 -out client.key.pem -nocerts -nodes
+```
+
