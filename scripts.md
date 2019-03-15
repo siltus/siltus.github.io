@@ -118,3 +118,10 @@ openssl pkcs12 -in client.p12 -out client.crt.pem -clcerts -nokeys
 openssl pkcs12 -in client.p12 -out client.key.pem -nocerts -nodes
 ```
 
+## Other Bash stuff
+
+### Count files recursively by extension
+
+```
+find . -type f | sed 's/.*\.//' | sort | uniq -c
+```
