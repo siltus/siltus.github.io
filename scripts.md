@@ -51,6 +51,12 @@ socat TCP-LISTEN:12345,fork TCP:localhost:54321
 
 ## Linux
 
+### Get public IP of the current machine from terminal
+
+```
+dig +short myip.opendns.com @resolver1.opendns.com
+```
+
 ### Count how many traffic goes through localhost:8888
 ```
 sudo iftop -i lo -P -n -f 'dst port 8888 || src port 8888' 
