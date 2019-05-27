@@ -49,6 +49,14 @@ ssh-keygen -R <the_offending_host>
 socat TCP-LISTEN:12345,fork TCP:localhost:54321
 ```
 
+## OSX
+
+### Who listens on port each port
+
+```
+lsof -n -i -P | grep LISTEN
+```
+
 ## Linux
 
 ### Get public IP of the current machine from terminal
