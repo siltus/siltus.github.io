@@ -139,3 +139,18 @@ openssl pkcs12 -in client.p12 -out client.key.pem -nocerts -nodes
 ```
 find . -type f | sed 's/.*\.//' | sort | uniq -c
 ```
+
+## jq
+
+### filter based on field
+
+```
+jq -r 'select(.field == value)'
+jq -r 'select(.field1 != .field2)'
+```
+
+### create new object based on piped objects
+
+```
+jq -r '{ a: .f1, b: .f2.f3 }'
+```
