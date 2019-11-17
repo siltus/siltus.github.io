@@ -154,3 +154,12 @@ jq -r 'select(.field1 != .field2)'
 ```
 jq -r '{ a: .f1, b: .f2.f3 }'
 ```
+
+## AWS
+
+### get supported availability zone for a specific machine type
+```
+aws ec2 describe-reserved-instances-offerings --filters 'Name=scope,Values=Availability Zone' --no-include-marketplace --instance-type $TYPE | jq -r '.ReservedInstancesOfferings[].AvailabilityZone' | sort | uniq
+```
+
+Where TYPE is "r5.large" etc.
