@@ -155,6 +155,13 @@ jq -r 'select(.field1 != .field2)'
 jq -r '{ a: .f1, b: .f2.f3 }'
 ```
 
+## Wireshark / Tshark
+
+### Print all packets body that satisfy a condition
+```
+tshark -r file.pcap -Y 'http && tcp contains "blabla"' -T fields -e http.file_data
+```
+
 ## AWS
 
 ### get supported availability zone for a specific machine type
