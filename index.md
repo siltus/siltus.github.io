@@ -1,5 +1,7 @@
 # My cools stuff
 
-* [Cool scripts](scripts.md)
+* [Dev scripts](scripts.md)
+
+* [DevOps scripts](devops_scripts.md)
 
 * [Hokeys](hotkeys.md)
