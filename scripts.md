@@ -107,6 +107,12 @@ ps aux | less -+S
 
 ## git
 
+### Find all changes to a specific file across all branches, with the actual diff
+
+```
+git log --all -p --source -- <path/to/file>
+```
+
 ### remove submodule
 
 * Delete the section referring to the submodule from the `.gitmodules` file
